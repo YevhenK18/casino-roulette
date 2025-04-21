@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Админ-панель - Не обман точка рулет</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #1a0033, #330066);
+      font-family: 'Arial', sans-serif;
+    }
+    .glow {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      transition: all 0.3s ease;
+    }
+    .glow:hover {
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    }
+  </style>
+</head>
+<body class="text-white flex items-center justify-center min-h-screen">
+  <div class="container mx-auto p-6 text-center rounded-2xl bg-gray-900 bg-opacity-80 shadow-2xl">
+    <h1 class="text-5xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Админ-панель - Не обман точка рулети</h1>
+    <div id="login" class="mb-8">
+      <label for="password" class="block text-lg mb-2">Enter Password:</label>
+      <input id="password" type="password" class="bg-gray-800 text-white p-3 rounded-lg glow w-full max-w-xs">
+      <button id="loginButton" class="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-bold py-3 px-6 rounded-lg glow mt-4">Login</button>
+    </div>
+    <div id="probabilities" class="hidden">
+      <h2 class="text-3xl font-semibold mb-6">Set Probabilities (%)</h2>
+      <div class="grid grid-cols-3 gap-4 max-w-4xl mx-auto">
+        <div>
+          <label for="prob0" class="block text-sm">Number 0:</label>
+          <input id="prob0" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob1" class="block text-sm">Number 1:</label>
+          <input id="prob1" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob2" class="block text-sm">Number 2:</label>
+          <input id="prob2" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob3" class="block text-sm">Number 3:</label>
+          <input id="prob3" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob4" class="block text-sm">Number 4:</label>
+          <input id="prob4" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob5" class="block text-sm">Number 5:</label>
+          <input id="prob5" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob6" class="block text-sm">Number 6:</label>
+          <input id="prob6" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob7" class="block text-sm">Number 7:</label>
+          <input id="prob7" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob8" class="block text-sm">Number 8:</label>
+          <input id="prob8" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob9" class="block text-sm">Number 9:</label>
+          <input id="prob9" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob10" class="block text-sm">Number 10:</label>
+          <input id="prob10" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob11" class="block text-sm">Number 11:</label>
+          <input id="prob11" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob12" class="block text-sm">Number 12:</label>
+          <input id="prob12" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob13" class="block text-sm">Number 13:</label>
+          <input id="prob13" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob14" class="block text-sm">Number 14:</label>
+          <input id="prob14" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob15" class="block text-sm">Number 15:</label>
+          <input id="prob15" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob16" class="block text-sm">Number 16:</label>
+          <input id="prob16" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob17" class="block text-sm">Number 17:</label>
+          <input id="prob17" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob18" class="block text-sm">Number 18:</label>
+          <input id="prob18" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob19" class="block text-sm">Number 19:</label>
+          <input id="prob19" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob20" class="block text-sm">Number 20:</label>
+          <input id="prob20" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob21" class="block text-sm">Number 21:</label>
+          <input id="prob21" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob22" class="block text-sm">Number 22:</label>
+          <input id="prob22" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob23" class="block text-sm">Number 23:</label>
+          <input id="prob23" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob24" class="block text-sm">Number 24:</label>
+          <input id="prob24" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob25" class="block text-sm">Number 25:</label>
+          <input id="prob25" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob26" class="block text-sm">Number 26:</label>
+          <input id="prob26" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob27" class="block text-sm">Number 27:</label>
+          <input id="prob27" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob28" class="block text-sm">Number 28:</label>
+          <input id="prob28" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob29" class="block text-sm">Number 29:</label>
+          <input id="prob29" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob30" class="block text-sm">Number 30:</label>
+          <input id="prob30" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob31" class="block text-sm">Number 31:</label>
+          <input id="prob31" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob32" class="block text-sm">Number 32:</label>
+          <input id="prob32" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob33" class="block text-sm">Number 33:</label>
+          <input id="prob33" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob34" class="block text-sm">Number 34:</label>
+          <input id="prob34" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob35" class="block text-sm">Number 35:</label>
+          <input id="prob35" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+        <div>
+          <label for="prob36" class="block text-sm">Number 36:</label>
+          <input id="prob36" type="number" min="0" max="100" value="2.7" class="bg-gray-800 text-white p-2 rounded-lg glow w-full">
+        </div>
+      </div>
+      <p id="probError" class="text-red-400 mt-4"></p>
+      <button id="saveButton" class="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-3 px-6 rounded-lg glow mt-6">Save</button>
+    </div>
+    <a href="index.html" class="mt-6 inline-block text-purple-400 hover:text-purple-300 transition-colors">Back to Game</a>
+  </div>
+  <script src="js/admin.js"></script>
+</body>
+</html>

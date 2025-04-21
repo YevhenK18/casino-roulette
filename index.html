@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Не обман точка рулет</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #1a0033, #330066);
+      font-family: 'Arial', sans-serif;
+    }
+    .glow {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      transition: all 0.3s ease;
+    }
+    .glow:hover {
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    }
+    button:disabled {
+      background-color: #4a5568;
+      cursor: not-allowed;
+    }
+    #result.glow-text {
+      animation: glowText 1s infinite alternate;
+    }
+    @keyframes glowText {
+      from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+      to { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+    }
+  </style>
+</head>
+<body class="text-white flex items-center justify-center min-h-screen">
+  <div class="container mx-auto p-6 text-center rounded-2xl bg-gray-900 bg-opacity-80 shadow-2xl">
+    <h1 class="text-5xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Не обман точка рулет</h1>
+    <div class="mb-8">
+      <p id="balance" class="text-3xl font-semibold">Balance: 1000</p>
+    </div>
+    <div class="relative mb-8">
+      <canvas id="rouletteCanvas" width="400" height="400" class="mx-auto"></canvas>
+      <div id="pointer" class="absolute top-0 left-1/2 w-6 h-12 bg-gradient-to-b from-red-500 to-red-700 rounded-b-full transform -translate-x-1/2 shadow-lg"></div>
+    </div>
+    <div class="mb-8 grid grid-cols-1 gap-4 max-w-md mx-auto">
+      <div>
+        <label for="betAmount" class="block text-lg mb-2">Bet Amount:</label>
+        <input id="betAmount" type="number" min="1" max="1000" value="10" class="bg-gray-800 text-white p-3 rounded-lg glow w-full">
+      </div>
+      <div>
+        <label for="betType" class="block text-lg mb-2">Bet Type:</label>
+        <select id="betType" class="bg-gray-800 text-white p-3 rounded-lg glow w-full">
+          <option value="number">Specific Number (x36)</option>
+          <option value="color">Color (x2)</option>
+          <option value="evenOdd">Even/Odd (x2)</option>
+        </select>
+      </div>
+      <div id="numberBet" class="bet-option">
+        <label for="betNumber" class="block text-lg mb-2">Choose Number (0-36):</label>
+        <input id="betNumber" type="number" min="0" max="36" value="0" class="bg-gray-800 text-white p-3 rounded-lg glow w-full">
+      </div>
+      <div id="colorBet" class="bet-option hidden">
+        <label for="betColor" class="block text-lg mb-2">Choose Color:</label>
+        <select id="betColor" class="bg-gray-800 text-white p-3 rounded-lg glow w-full">
+          <option value="red">Red</option>
+          <option value="black">Black</option>
+        </select>
+      </div>
+      <div id="evenOddBet" class="bet-option hidden">
+        <label for="betEvenOdd" class="block text-lg mb-2">Choose Even/Odd:</label>
+        <select id="betEvenOdd" class="bg-gray-800 text-white p-3 rounded-lg glow w-full">
+          <option value="even">Even</option>
+          <option value="odd">Odd</option>
+        </select>
+      </div>
+    </div>
+    <button id="spinButton" class="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-3 px-6 rounded-lg glow">Spin</button>
+    <p id="result" class="mt-8 text-2xl font-semibold"></p>
+    <a href="admin.html" class="mt-6 inline-block text-purple-400 hover:text-purple-300 transition-colors">Admin Panel</a>
+    <audio id="spinSound" src="assets/spin.wav"></audio>
+    <audio id="winSound" src="assets/win.wav"></audio>
+    <audio id="loseSound" src="assets/lose.wav"></audio>
+  </div>
+  <script src="js/animations.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
